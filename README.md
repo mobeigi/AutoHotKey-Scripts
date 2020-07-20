@@ -8,7 +8,8 @@
 <br />
 
 ## Description
-My collection of AutoHotKey Scripts.
+My collection of AutoHotKey scripts.
+Some of these scritps may not be mine (see files themselves for attribution).
 
 ## Contributions
 Contributions are always welcome!
