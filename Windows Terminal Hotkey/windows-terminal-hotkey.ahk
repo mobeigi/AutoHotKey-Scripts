@@ -8,6 +8,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Run Windows Terminal at current path
 ^!t::
 	path := Explorer_GetPath()
+	path := RegExReplace(path, "\\", "\\\\") ; Escape slashes to fix arg tokinization (https://github.com/microsoft/terminal/issues/4571)
 	args := ""
 	If (path != "ERROR") {
 		args .= "-d " . """" . path . """"
