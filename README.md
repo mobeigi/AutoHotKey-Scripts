@@ -9,7 +9,7 @@
 
 ## Description
 My collection of AutoHotKey scripts.  
-Some of these scritps may not be mine (see files themselves for attribution).
+Some of these scripts may not be mine (see files themselves for attribution).
 
 ## Contributions
 Contributions are always welcome!
