@@ -1,4 +1,5 @@
-﻿#Include Explorer_v2.ahk
+﻿#Requires AutoHotkey v2.0
+#Include Explorer_v2.ahk
 
 ; Open selected file(s) using Zed
 zedPath := EnvGet("LocalAppData") "\Programs\Zed\Zed.exe"

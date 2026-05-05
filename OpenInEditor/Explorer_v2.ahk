@@ -62,18 +62,18 @@ Explorer_GetWindow(hwnd := "")
 {
 	; thanks to jethrow for some pointers here
 	hwnd := hwnd ? hwnd : WinExist("A")
-	process := WinGetProcessName("ahk_id " hwnd)
-	class   := WinGetClass("ahk_id " hwnd)
+	process  := WinGetProcessName("ahk_id " hwnd)
+	winClass := WinGetClass("ahk_id " hwnd)
 
 	if (process != "explorer.exe")
 		return
-	if (class ~= "(Cabinet|Explore)WClass")
+	if (winClass ~= "(Cabinet|Explore)WClass")
 	{
 		for window in ComObject("Shell.Application").Windows
 			if (window.hwnd == hwnd)
 				return window
 	}
-	else if (class ~= "Progman|WorkerW")
+	else if (winClass ~= "Progman|WorkerW")
 		return "desktop" ; desktop found
 }
 
