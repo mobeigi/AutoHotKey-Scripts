@@ -3,7 +3,7 @@
 
 ; Open selected file(s) using Zed
 zedPath := EnvGet("LocalAppData") "\Programs\Zed\Zed.exe"
-SC121::
+F13::
 {
     selectedItems := Explorer_GetSelected()
 
