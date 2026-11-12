@@ -2,7 +2,7 @@
 #Include Explorer_v2.ahk
 
 ; Open selected file(s) using Zed
-zedPath := EnvGet("LocalAppData") "\Programs\Zed\Zed.exe"
+zedCliPath := EnvGet("LocalAppData") "\Programs\Zed\bin\Zed.exe"
 F13::
 {
     selectedItems := Explorer_GetSelected()
@@ -11,17 +11,17 @@ F13::
     {
         selectedItems := '"' . selectedItems . '"'
         selectedItems := StrReplace(selectedItems, "`n", '" "')
-        Run('"' zedPath '" ' selectedItems)
-        return
+        Run('"' zedCliPath '" ' selectedItems, , "Hide")
+		return
     }
 
     currentPath := Explorer_GetPath()
 
     if (currentPath != "" && currentPath != "ERROR")
     {
-        Run('"' zedPath '" "' currentPath '"')
+        Run('"' zedCliPath '" "' currentPath '"', , "Hide")
         return
     }
 
-    Run('"' zedPath '"')
+    Run('"' zedCliPath '"', , "Hide")
 }
